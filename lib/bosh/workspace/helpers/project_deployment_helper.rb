@@ -75,7 +75,6 @@ module Bosh::Workspace
     private
 
     def use_targeted_director_uuid
-      no_warden_error unless warden_cpi?
       project_deployment.director_uuid = bosh_uuid
     end
 

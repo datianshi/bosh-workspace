@@ -21,6 +21,10 @@ module Bosh::Cli::Command
       prepare_releases
       nl
       prepare_stemcells
+      if project_deployment?
+        require_project_deployment
+        build_project_deployment
+      end
     end
 
     private
